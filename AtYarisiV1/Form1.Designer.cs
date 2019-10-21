@@ -78,7 +78,7 @@
             // at2label
             // 
             this.at2label.AutoSize = true;
-            this.at2label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(103)))), ((int)(((byte)(200)))));
+            this.at2label.BackColor = System.Drawing.Color.Red;
             this.at2label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.at2label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.at2label.Location = new System.Drawing.Point(45, 151);
@@ -90,7 +90,7 @@
             // at3label
             // 
             this.at3label.AutoSize = true;
-            this.at3label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(103)))), ((int)(((byte)(200)))));
+            this.at3label.BackColor = System.Drawing.Color.Red;
             this.at3label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.at3label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.at3label.Location = new System.Drawing.Point(45, 291);
@@ -193,13 +193,12 @@
             this.resetButton.TabIndex = 2;
             this.resetButton.Text = "Sıfırla";
             this.resetButton.UseVisualStyleBackColor = false;
-            this.resetButton.Visible = false;
             this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // at1label
             // 
             this.at1label.AutoSize = true;
-            this.at1label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(103)))), ((int)(((byte)(200)))));
+            this.at1label.BackColor = System.Drawing.Color.IndianRed;
             this.at1label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.at1label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.at1label.Location = new System.Drawing.Point(45, 22);
@@ -387,6 +386,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1126, 571);
+            this.Controls.Add(this.finishLabel);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.at3label);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.at2label);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.at1label);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.time2label);
             this.Controls.Add(this.yarisBilgisi2Label);
             this.Controls.Add(this.timeLabel);
@@ -403,19 +412,9 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.yarisBilgisiLabel);
-            this.Controls.Add(this.at1label);
             this.Controls.Add(this.resetButton);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.finishLabel);
             this.Controls.Add(this.startButton);
-            this.Controls.Add(this.at3label);
-            this.Controls.Add(this.at2label);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Mert KARACA - At Yarışı";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

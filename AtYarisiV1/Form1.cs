@@ -20,7 +20,7 @@ namespace AtYarisiV1
         private void StartButton_Click(object sender, EventArgs e)
         {
             //It's just for using same button both for start and stop purposes
-            if(timer1.Enabled == false)
+            if (timer1.Enabled == false)
             {
                 timer1.Enabled = true;
                 startButton.Text = "Durdur";
@@ -34,31 +34,34 @@ namespace AtYarisiV1
             }
         }
 
-        Random rastgele = new Random();
+        //Define all variables in global scope to avoid unnecessary RAM usage
+        Random random = new Random();
+        int sure = 0, sureSaniye;
+        int ortaUzaklik,bitisUzaklik;
+        int birinciAt,ikinciAt,ucuncuAt;
 
+        int Rastgele()
+        {
+            int a = random.Next(1, 10);
+            return a;
+        }
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            int sure = Convert.ToInt32(timeLabel.Text);
-            sure++;
-            int sureSaniye = sure / 5;
             timeLabel.Text = sure.ToString();
+            sure++;
+            sureSaniye = sure / 5;
             time2label.Text = sureSaniye.ToString() + " Saniye";
 
-            //Defining a variable to hold horse visuals width. It's for checkpoint and finish check.
-            int birGenislik = pictureBox1.Width;
-            int ikiGenislik = pictureBox2.Width;
-            int ucGenislik = pictureBox3.Width;
-
             //Defining a variable to hold checkpoint and finish points position. 
-            int bitisUzaklik = finishLabel.Left;
-            int ortaUzaklik = checkpointLabel.Left;
+            bitisUzaklik = finishLabel.Left;
+            ortaUzaklik = checkpointLabel.Left;
 
             //Random integer variable for next step
-            int birinciAt = rastgele.Next(1, 10);
-            int ikinciAt = rastgele.Next(1, 10);
-            int ucuncuAt = rastgele.Next(1, 10);
+            birinciAt = Rastgele();
+            ikinciAt = Rastgele();
+            ucuncuAt = Rastgele();
 
-            //All horse visuals labels accerelates randomly with their label descriptions
+            //All horse visuals labels accerelates randomly with their own label descriptions
             pictureBox1.Left += birinciAt;
             at1label.Left += birinciAt;
 
@@ -83,35 +86,35 @@ namespace AtYarisiV1
             }
 
             //Checkpoint Check
-            if (birGenislik + pictureBox1.Left >= ortaUzaklik)
+            if (pictureBox1.Width + pictureBox1.Left >= ortaUzaklik)
             {
                 yarisBilgisi2Label.Text = "500m'ye Gülbatur önde girdi";
             }
 
-            if (ikiGenislik + pictureBox2.Left >= ortaUzaklik)
+            if (pictureBox2.Width + pictureBox2.Left >= ortaUzaklik)
             {
                 yarisBilgisi2Label.Text = "500m'ye Şahbatur önde girdi";
             }
 
-            if (ucGenislik + pictureBox3.Left >= ortaUzaklik)
+            if (pictureBox3.Width + pictureBox3.Left >= ortaUzaklik)
             {
                 yarisBilgisi2Label.Text = "500m'ye Hidalgo önde girdi";
             }
 
             //Finish Check
-            if (birGenislik + pictureBox1.Left >= bitisUzaklik)
+            if (pictureBox1.Width + pictureBox1.Left >= bitisUzaklik)
             {
                 timer1.Enabled = false;
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Gülbatur kazandı";
             }
 
-            if (ikiGenislik + pictureBox2.Left >= bitisUzaklik)
+            if (pictureBox2.Width + pictureBox2.Left >= bitisUzaklik)
             {
                 timer1.Enabled = false;
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Şahbatur kazandı";
             }
 
-            if (ucGenislik + pictureBox3.Left >= bitisUzaklik)
+            if (pictureBox3.Width + pictureBox3.Left >= bitisUzaklik)
             {
                 timer1.Enabled = false;
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Hidalgo kazandı";
@@ -119,10 +122,23 @@ namespace AtYarisiV1
 
 
         }
-        //Buradan devam et
         private void ResetButton_Click(object sender, EventArgs e)
         {
-            
+            timeLabel.Text = "0";
+            time2label.Text = "0";
+            timer1.Enabled = false;
+            startButton.Text = "Başlat";
+            startButton.BackColor = Color.FromArgb(0, 200, 81);
+
+            pictureBox1.Left = 32;
+            at1label.Left = 45;
+
+            pictureBox2.Left = 32;
+            at2label.Left = 45;
+
+            pictureBox3.Left = 32;
+            at3label.Left = 45;
         }
+
     }
 }
