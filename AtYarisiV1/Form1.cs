@@ -40,6 +40,19 @@ namespace AtYarisiV1
         int ortaUzaklik,bitisUzaklik;
         int birinciAt,ikinciAt,ucuncuAt;
 
+        private void Play_Click(object sender, EventArgs e)
+        {
+            //axWindowsMediaPlayer1.URL("");
+            //if(axWindowsMediaPlayer1.Ctlcontrols.play() == true)
+            //{
+            //    axWindowsMediaPlayer1.Ctlcontrols.pause();
+            //}
+            //else
+            //{
+            //    axWindowsMediaPlayer1.Ctlcontrols.play();
+            //}
+        }
+
         int Rastgele()
         {
             int a = random.Next(1, 10);

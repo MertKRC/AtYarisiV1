@@ -8,3 +8,8 @@ C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.csproj.Ge
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.csproj.CoreCompileInputs.cache
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.exe
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.pdb
+C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\Interop.WMPLib.dll
+C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.csproj.ResolveComReference.cache
+C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\bin\Debug\Interop.WMPLib.dll
+C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\bin\Debug\AxInterop.WMPLib.dll

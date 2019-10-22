@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.at2label = new System.Windows.Forms.Label();
             this.at3label = new System.Windows.Forms.Label();
@@ -59,9 +60,13 @@
             this.label18 = new System.Windows.Forms.Label();
             this.yarisBilgisi2Label = new System.Windows.Forms.Label();
             this.time2label = new System.Windows.Forms.Label();
+            this.play = new System.Windows.Forms.Button();
+            this.mute = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +90,7 @@
             this.at2label.Location = new System.Drawing.Point(68, 232);
             this.at2label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.at2label.Name = "at2label";
-            this.at2label.Size = new System.Drawing.Size(83, 20);
+            this.at2label.Size = new System.Drawing.Size(117, 29);
             this.at2label.TabIndex = 4;
             this.at2label.Text = "Şahbatur";
             // 
@@ -98,7 +103,7 @@
             this.at3label.Location = new System.Drawing.Point(68, 448);
             this.at3label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.at3label.Name = "at3label";
-            this.at3label.Size = new System.Drawing.Size(70, 20);
+            this.at3label.Size = new System.Drawing.Size(104, 29);
             this.at3label.TabIndex = 5;
             this.at3label.Text = "Hidalgo";
             // 
@@ -210,13 +215,13 @@
             // at1label
             // 
             this.at1label.AutoSize = true;
-            this.at1label.BackColor = System.Drawing.Color.Red;
+            this.at1label.BackColor = System.Drawing.Color.Firebrick;
             this.at1label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.at1label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.at1label.Location = new System.Drawing.Point(68, 34);
             this.at1label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.at1label.Name = "at1label";
-            this.at1label.Size = new System.Drawing.Size(79, 20);
+            this.at1label.Size = new System.Drawing.Size(112, 29);
             this.at1label.TabIndex = 11;
             this.at1label.Text = "Gülbatur";
             // 
@@ -409,12 +414,52 @@
             this.time2label.TabIndex = 27;
             this.time2label.Text = "0 Saniye";
             // 
+            // play
+            // 
+            this.play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(81)))));
+            this.play.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.play.ForeColor = System.Drawing.SystemColors.Control;
+            this.play.Location = new System.Drawing.Point(1282, 783);
+            this.play.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.play.Name = "play";
+            this.play.Size = new System.Drawing.Size(90, 51);
+            this.play.TabIndex = 28;
+            this.play.Text = "Play";
+            this.play.UseVisualStyleBackColor = false;
+            this.play.Click += new System.EventHandler(this.Play_Click);
+            // 
+            // mute
+            // 
+            this.mute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(81)))));
+            this.mute.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mute.ForeColor = System.Drawing.SystemColors.Control;
+            this.mute.Location = new System.Drawing.Point(1394, 783);
+            this.mute.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.mute.Name = "mute";
+            this.mute.Size = new System.Drawing.Size(90, 51);
+            this.mute.TabIndex = 29;
+            this.mute.Text = "Mute";
+            this.mute.UseVisualStyleBackColor = false;
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1541, 783);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
+            this.axWindowsMediaPlayer1.TabIndex = 30;
+            this.axWindowsMediaPlayer1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1689, 878);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.mute);
+            this.Controls.Add(this.play);
             this.Controls.Add(this.finishLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -450,6 +495,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,6 +533,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label yarisBilgisi2Label;
         private System.Windows.Forms.Label time2label;
+        private System.Windows.Forms.Button play;
+        private System.Windows.Forms.Button mute;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }
 
