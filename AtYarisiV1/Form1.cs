@@ -33,16 +33,17 @@ namespace AtYarisiV1
             string dizin = Application.StartupPath.ToString();
             try
             {
+                //Find better way to do this or make it work with standalone .exe file
                 axWindowsMediaPlayer1.URL = dizin + "\\blabla.mp3";
             }
             catch
             {
-                Form form2 = new Form();
-                form2.Show();
+                //add exception message here
             }
             
         }
 
+        //Start-Stop button
         private void StartButton_Click(object sender, EventArgs e)
         {
             //It's just for using same button both for start and stop purposes
@@ -62,12 +63,7 @@ namespace AtYarisiV1
             }
         }
 
-        //Define all variables in global scope to avoid unnecessary RAM usage
-        Random random = new Random();
-        int sure = 0, sureSaniye;
-        int ortaUzaklik,bitisUzaklik;
-        int birinciAt,ikinciAt,ucuncuAt;
-
+        //Play-Pause button for music control
         private void Play_Click(object sender, EventArgs e)
         {
             if(play.Text == "Play")
@@ -84,12 +80,47 @@ namespace AtYarisiV1
             }
         }
 
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            //All changes below is reset all values to default as application start
+
+            //Time labels not working properly. When start button clicked after reset button, this values turn back to saved ones.
+            timeLabel.Text = "0";
+            time2label.Text = "0";
+
+            yarisBilgisiLabel.Text = "...";
+            yarisBilgisi2Label.Text = "...";
+
+            CheckpointFlag = 0;
+
+
+            timer1.Enabled = false;
+            startButton.Text = "Başlat";
+            startButton.BackColor = Color.FromArgb(0, 200, 81);
+
+            //Horse and label positions
+
+            pictureBox1.Left = 32;
+            at1label.Left = 45;
+            at1500Label.Left = 45;
+
+            pictureBox2.Left = 32;
+            at2label.Left = 45;
+            at1500Label.Left = 45;
+
+            pictureBox3.Left = 32;
+            at3label.Left = 45;
+            at1500Label.Left = 45;
+        }
+
+        //Function for create random int value
         int Rastgele()
         {
             int a = random.Next(1, 10);
             return a;
         }
         
+        //Function for call media events 
         void MusicPlay(int deger)
         {
             if(deger == 1)
@@ -105,6 +136,13 @@ namespace AtYarisiV1
                 axWindowsMediaPlayer1.Ctlcontrols.stop();
             }
         }
+
+        //Define all variables in global scope to avoid unnecessary RAM usage
+        Random random = new Random();
+        int sure = 0, sureSaniye;
+        int ortaUzaklik, bitisUzaklik;
+        int birinciAt, ikinciAt, ucuncuAt;
+        int CheckpointFlag = 0;
         private void Timer1_Tick(object sender, EventArgs e)
         {
             timeLabel.Text = sure.ToString();
@@ -149,22 +187,23 @@ namespace AtYarisiV1
             }
 
             //Checkpoint Check
-            ////Burası 500m de problem yapıyor. İlk gireni yazıyor en son gireni kontrole devam ettiği için yazmaya devam ediyor. Burayı hallet.
-            if (pictureBox1.Width + at1500Label.Left >= ortaUzaklik)
+            if (pictureBox1.Width + at1500Label.Left >= ortaUzaklik && CheckpointFlag == 0)
             {
                 yarisBilgisi2Label.Text = "500m'ye Gülbatur önde girdi";
+                CheckpointFlag++;
             }
 
-            else if (pictureBox2.Width + at2500Label.Left >= ortaUzaklik)
+            else if (pictureBox2.Width + at2500Label.Left >= ortaUzaklik && CheckpointFlag == 0)
             {
                 yarisBilgisi2Label.Text = "500m'ye Şahbatur önde girdi";
+                CheckpointFlag++;
             }
 
-            else if (pictureBox3.Width + label13.Left >= ortaUzaklik)
+            else if (pictureBox3.Width + label13.Left >= ortaUzaklik && CheckpointFlag == 0)
             {
                 yarisBilgisi2Label.Text = "500m'ye Hidalgo önde girdi";
+                CheckpointFlag++;
             }
-            //çözüm ek label ekle her bir item için. Hepsini visible false yap. 500m e geldiğinde konusu kapansın...
 
             //Finish Check
             if (pictureBox1.Width + pictureBox1.Left >= bitisUzaklik)
@@ -187,28 +226,7 @@ namespace AtYarisiV1
 
 
         }
-        private void ResetButton_Click(object sender, EventArgs e)
-        {
-            timeLabel.Text = "0";
-            time2label.Text = "0";
-            yarisBilgisiLabel.Text = "...";
-            yarisBilgisi2Label.Text = "...";
-            timer1.Enabled = false;
-            startButton.Text = "Başlat";
-            startButton.BackColor = Color.FromArgb(0, 200, 81);
-
-            pictureBox1.Left = 32;
-            at1label.Left = 45;
-            at1500Label.Left = 45;
-
-            pictureBox2.Left = 32;
-            at2label.Left = 45;
-            at1500Label.Left = 45;
-
-            pictureBox3.Left = 32;
-            at3label.Left = 45;
-            at1500Label.Left = 45;
-        }
+        
 
     }
 }
