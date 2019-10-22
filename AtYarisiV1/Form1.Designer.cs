@@ -61,7 +61,6 @@
             this.yarisBilgisi2Label = new System.Windows.Forms.Label();
             this.time2label = new System.Windows.Forms.Label();
             this.play = new System.Windows.Forms.Button();
-            this.mute = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.at1500Label = new System.Windows.Forms.Label();
             this.at2500Label = new System.Windows.Forms.Label();
@@ -419,7 +418,7 @@
             // 
             // play
             // 
-            this.play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(81)))));
+            this.play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
             this.play.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.play.ForeColor = System.Drawing.SystemColors.Control;
             this.play.Location = new System.Drawing.Point(1282, 783);
@@ -431,27 +430,13 @@
             this.play.UseVisualStyleBackColor = false;
             this.play.Click += new System.EventHandler(this.Play_Click);
             // 
-            // mute
-            // 
-            this.mute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(81)))));
-            this.mute.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mute.ForeColor = System.Drawing.SystemColors.Control;
-            this.mute.Location = new System.Drawing.Point(1394, 783);
-            this.mute.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.mute.Name = "mute";
-            this.mute.Size = new System.Drawing.Size(90, 51);
-            this.mute.TabIndex = 29;
-            this.mute.Text = "Mute";
-            this.mute.UseVisualStyleBackColor = false;
-            this.mute.Visible = false;
-            // 
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1328, 678);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1282, 708);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(172, 97);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(202, 67);
             this.axWindowsMediaPlayer1.TabIndex = 30;
             // 
             // at1500Label
@@ -500,7 +485,6 @@
             this.Controls.Add(this.at2500Label);
             this.Controls.Add(this.at1500Label);
             this.Controls.Add(this.axWindowsMediaPlayer1);
-            this.Controls.Add(this.mute);
             this.Controls.Add(this.play);
             this.Controls.Add(this.finishLabel);
             this.Controls.Add(this.label7);
@@ -576,7 +560,6 @@
         private System.Windows.Forms.Label yarisBilgisi2Label;
         private System.Windows.Forms.Label time2label;
         private System.Windows.Forms.Button play;
-        private System.Windows.Forms.Button mute;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.Label at1500Label;
         private System.Windows.Forms.Label at2500Label;

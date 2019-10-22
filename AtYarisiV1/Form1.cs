@@ -28,6 +28,7 @@ namespace AtYarisiV1
             at3label.Left = 45;
             at1500Label.Left = 45;
 
+
             axWindowsMediaPlayer1.URL = "C:\\Users\\selef\\Desktop\\ders\\dersbla.mp3";
         }
 
@@ -61,11 +62,13 @@ namespace AtYarisiV1
             if(play.Text == "Play")
             {
                 play.Text = "Pause";
+                play.BackColor = Color.FromArgb(255, 53, 71);
                 MusicPlay(1);
             }
             else
             {
                 play.Text = "Play";
+                play.BackColor = Color.FromArgb(0, 200, 81);
                 MusicPlay(2);
             }
         }
