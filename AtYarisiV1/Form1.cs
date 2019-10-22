@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +12,10 @@ namespace AtYarisiV1
 {
     public partial class Form1 : Form
     {
+        //Problem list;
+        //When reset button clicked timer stops and second text going 0 but if start button clicked after that, second turn back to last state
+        //Will add horse sfx on start button click
+        //Wİll add another music to play button
         public Form1()
         {
             InitializeComponent();
