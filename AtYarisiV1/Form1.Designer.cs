@@ -215,7 +215,7 @@
             // at1label
             // 
             this.at1label.AutoSize = true;
-            this.at1label.BackColor = System.Drawing.Color.Firebrick;
+            this.at1label.BackColor = System.Drawing.Color.Red;
             this.at1label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.at1label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.at1label.Location = new System.Drawing.Point(68, 34);
@@ -422,7 +422,7 @@
             this.play.Location = new System.Drawing.Point(1282, 783);
             this.play.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.play.Name = "play";
-            this.play.Size = new System.Drawing.Size(90, 51);
+            this.play.Size = new System.Drawing.Size(104, 51);
             this.play.TabIndex = 28;
             this.play.Text = "Play";
             this.play.UseVisualStyleBackColor = false;
@@ -440,16 +440,16 @@
             this.mute.TabIndex = 29;
             this.mute.Text = "Mute";
             this.mute.UseVisualStyleBackColor = false;
+            this.mute.Visible = false;
             // 
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1541, 783);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1328, 678);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(172, 97);
             this.axWindowsMediaPlayer1.TabIndex = 30;
-            this.axWindowsMediaPlayer1.Visible = false;
             // 
             // Form1
             // 

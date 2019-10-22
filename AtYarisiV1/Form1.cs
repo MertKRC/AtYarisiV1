@@ -15,6 +15,8 @@ namespace AtYarisiV1
         public Form1()
         {
             InitializeComponent();
+
+            axWindowsMediaPlayer1.URL = "C:\\Users\\selef\\Desktop\\ders\\dersbla.mp3";
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -42,15 +44,16 @@ namespace AtYarisiV1
 
         private void Play_Click(object sender, EventArgs e)
         {
-            //axWindowsMediaPlayer1.URL("");
-            //if(axWindowsMediaPlayer1.Ctlcontrols.play() == true)
-            //{
-            //    axWindowsMediaPlayer1.Ctlcontrols.pause();
-            //}
-            //else
-            //{
-            //    axWindowsMediaPlayer1.Ctlcontrols.play();
-            //}
+            if(play.Text == "Play")
+            {
+                play.Text = "Pause";
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+            else
+            {
+                play.Text = "Play";
+                axWindowsMediaPlayer1.Ctlcontrols.pause();
+            }
         }
 
         int Rastgele()
