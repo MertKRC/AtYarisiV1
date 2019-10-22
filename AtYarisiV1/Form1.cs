@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,8 +29,9 @@ namespace AtYarisiV1
             at3label.Left = 45;
             at1500Label.Left = 45;
 
-
-            axWindowsMediaPlayer1.URL = "C:\\Users\\selef\\Desktop\\ders\\dersbla.mp3";
+            //Automatically refers to programs Bin\Debug folder
+            string dizin = Application.StartupPath.ToString();
+            axWindowsMediaPlayer1.URL = dizin + "\\blabla.mp3";
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -180,6 +182,8 @@ namespace AtYarisiV1
         {
             timeLabel.Text = "0";
             time2label.Text = "0";
+            yarisBilgisiLabel.Text = "...";
+            yarisBilgisi2Label.Text = "...";
             timer1.Enabled = false;
             startButton.Text = "Başlat";
             startButton.BackColor = Color.FromArgb(0, 200, 81);
