@@ -15,6 +15,18 @@ namespace AtYarisiV1
         public Form1()
         {
             InitializeComponent();
+            //Reset all start points on create
+            pictureBox1.Left = 32;
+            at1label.Left = 45;
+            at1500Label.Left = 45;
+
+            pictureBox2.Left = 32;
+            at2label.Left = 45;
+            at1500Label.Left = 45;
+
+            pictureBox3.Left = 32;
+            at3label.Left = 45;
+            at1500Label.Left = 45;
 
             axWindowsMediaPlayer1.URL = "C:\\Users\\selef\\Desktop\\ders\\dersbla.mp3";
         }
@@ -27,12 +39,14 @@ namespace AtYarisiV1
                 timer1.Enabled = true;
                 startButton.Text = "Durdur";
                 startButton.BackColor = Color.FromArgb(255, 53, 71);
+                MusicPlay(1);
             }
             else
             {
                 timer1.Enabled = false;
                 startButton.Text = "Başlat";
                 startButton.BackColor = Color.FromArgb(0, 200, 81);
+                MusicPlay(2);
             }
         }
 
@@ -47,12 +61,12 @@ namespace AtYarisiV1
             if(play.Text == "Play")
             {
                 play.Text = "Pause";
-                axWindowsMediaPlayer1.Ctlcontrols.play();
+                MusicPlay(1);
             }
             else
             {
                 play.Text = "Play";
-                axWindowsMediaPlayer1.Ctlcontrols.pause();
+                MusicPlay(2);
             }
         }
 
@@ -60,6 +74,22 @@ namespace AtYarisiV1
         {
             int a = random.Next(1, 10);
             return a;
+        }
+        
+        void MusicPlay(int deger)
+        {
+            if(deger == 1)
+            {
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+            else if(deger == 2)
+            {
+                axWindowsMediaPlayer1.Ctlcontrols.pause();
+            }
+            else if(deger == 3)
+            {
+                axWindowsMediaPlayer1.Ctlcontrols.stop();
+            }
         }
         private void Timer1_Tick(object sender, EventArgs e)
         {
@@ -80,12 +110,15 @@ namespace AtYarisiV1
             //All horse visuals labels accerelates randomly with their own label descriptions
             pictureBox1.Left += birinciAt;
             at1label.Left += birinciAt;
+            at1500Label.Left += birinciAt;
 
             pictureBox2.Left += ikinciAt;
             at2label.Left += ikinciAt;
+            at2500Label.Left += ikinciAt;
 
             pictureBox3.Left += ucuncuAt;
             at3label.Left += ucuncuAt;
+            label13.Left += ucuncuAt;
 
             //Who is leading check
             if (pictureBox1.Left > pictureBox2.Left && pictureBox1.Left > pictureBox3.Left)
@@ -102,20 +135,22 @@ namespace AtYarisiV1
             }
 
             //Checkpoint Check
-            if (pictureBox1.Width + pictureBox1.Left >= ortaUzaklik)
+            ////Burası 500m de problem yapıyor. İlk gireni yazıyor en son gireni kontrole devam ettiği için yazmaya devam ediyor. Burayı hallet.
+            if (pictureBox1.Width + at1500Label.Left >= ortaUzaklik)
             {
                 yarisBilgisi2Label.Text = "500m'ye Gülbatur önde girdi";
             }
 
-            if (pictureBox2.Width + pictureBox2.Left >= ortaUzaklik)
+            else if (pictureBox2.Width + at2500Label.Left >= ortaUzaklik)
             {
                 yarisBilgisi2Label.Text = "500m'ye Şahbatur önde girdi";
             }
 
-            if (pictureBox3.Width + pictureBox3.Left >= ortaUzaklik)
+            else if (pictureBox3.Width + label13.Left >= ortaUzaklik)
             {
                 yarisBilgisi2Label.Text = "500m'ye Hidalgo önde girdi";
             }
+            //çözüm ek label ekle her bir item için. Hepsini visible false yap. 500m e geldiğinde konusu kapansın...
 
             //Finish Check
             if (pictureBox1.Width + pictureBox1.Left >= bitisUzaklik)
@@ -148,12 +183,15 @@ namespace AtYarisiV1
 
             pictureBox1.Left = 32;
             at1label.Left = 45;
+            at1500Label.Left = 45;
 
             pictureBox2.Left = 32;
             at2label.Left = 45;
+            at1500Label.Left = 45;
 
             pictureBox3.Left = 32;
             at3label.Left = 45;
+            at1500Label.Left = 45;
         }
 
     }

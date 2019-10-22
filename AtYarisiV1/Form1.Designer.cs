@@ -63,6 +63,9 @@
             this.play = new System.Windows.Forms.Button();
             this.mute = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.at1500Label = new System.Windows.Forms.Label();
+            this.at2500Label = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -424,7 +427,7 @@
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(104, 51);
             this.play.TabIndex = 28;
-            this.play.Text = "Play";
+            this.play.Text = "Pause";
             this.play.UseVisualStyleBackColor = false;
             this.play.Click += new System.EventHandler(this.Play_Click);
             // 
@@ -451,12 +454,51 @@
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(172, 97);
             this.axWindowsMediaPlayer1.TabIndex = 30;
             // 
+            // at1500Label
+            // 
+            this.at1500Label.BackColor = System.Drawing.Color.White;
+            this.at1500Label.Enabled = false;
+            this.at1500Label.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.at1500Label.Location = new System.Drawing.Point(44, 63);
+            this.at1500Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.at1500Label.Name = "at1500Label";
+            this.at1500Label.Size = new System.Drawing.Size(162, 10);
+            this.at1500Label.TabIndex = 31;
+            this.at1500Label.Visible = false;
+            // 
+            // at2500Label
+            // 
+            this.at2500Label.BackColor = System.Drawing.Color.White;
+            this.at2500Label.Enabled = false;
+            this.at2500Label.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.at2500Label.Location = new System.Drawing.Point(44, 261);
+            this.at2500Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.at2500Label.Name = "at2500Label";
+            this.at2500Label.Size = new System.Drawing.Size(162, 10);
+            this.at2500Label.TabIndex = 32;
+            this.at2500Label.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Enabled = false;
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Location = new System.Drawing.Point(44, 477);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(162, 10);
+            this.label13.TabIndex = 33;
+            this.label13.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1689, 878);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.at2500Label);
+            this.Controls.Add(this.at1500Label);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.mute);
             this.Controls.Add(this.play);
@@ -536,6 +578,9 @@
         private System.Windows.Forms.Button play;
         private System.Windows.Forms.Button mute;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.Label at1500Label;
+        private System.Windows.Forms.Label at2500Label;
+        private System.Windows.Forms.Label label13;
     }
 }
 
