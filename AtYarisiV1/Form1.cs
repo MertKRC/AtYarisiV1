@@ -31,7 +31,16 @@ namespace AtYarisiV1
 
             //Automatically refers to programs Bin\Debug folder
             string dizin = Application.StartupPath.ToString();
-            axWindowsMediaPlayer1.URL = dizin + "\\blabla.mp3";
+            try
+            {
+                axWindowsMediaPlayer1.URL = dizin + "\\blabla.mp3";
+            }
+            catch
+            {
+                Form form2 = new Form();
+                form2.Show();
+            }
+            
         }
 
         private void StartButton_Click(object sender, EventArgs e)
