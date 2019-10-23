@@ -15,7 +15,8 @@ namespace AtYarisiV1
         //Problem list;
         //When reset button clicked timer stops and second text going 0 but if start button clicked after that, second turn back to last state
         //Will add horse sfx on start button click
-        //Wİll add another music to play button
+        //Will add another music to play button
+        //Create a class for horses and call all horses from there
         public Form1()
         {
             InitializeComponent();
@@ -52,14 +53,14 @@ namespace AtYarisiV1
             //It's just for using same button both for start and stop purposes
             if (timer1.Enabled == false)
             {
-                timer1.Enabled = true;
+                timer1.Start();
                 startButton.Text = "Durdur";
                 startButton.BackColor = Color.FromArgb(255, 53, 71);
                 MusicPlay(1);
             }
             else
             {
-                timer1.Enabled = false;
+                timer1.Stop();
                 startButton.Text = "Başlat";
                 startButton.BackColor = Color.FromArgb(0, 200, 81);
                 MusicPlay(2);
@@ -95,9 +96,10 @@ namespace AtYarisiV1
             yarisBilgisi2Label.Text = "...";
 
             CheckpointFlag = 0;
+            TimeFlag++;
 
 
-            timer1.Enabled = false;
+            timer1.Stop();
             startButton.Text = "Başlat";
             startButton.BackColor = Color.FromArgb(0, 200, 81);
 
@@ -114,6 +116,7 @@ namespace AtYarisiV1
             pictureBox3.Left = 32;
             at3label.Left = 45;
             at1500Label.Left = 45;
+
         }
 
         //Function for create random int value
@@ -146,8 +149,22 @@ namespace AtYarisiV1
         int ortaUzaklik, bitisUzaklik;
         int birinciAt, ikinciAt, ucuncuAt;
         int CheckpointFlag = 0;
+        int TimeFlag;
         private void Timer1_Tick(object sender, EventArgs e)
         {
+            //Experimental start
+            if(TimeFlag != 0)
+            {
+                sure = 0;
+                yarisBilgisi2Label.Text = "...";
+                TimeFlag = 0;
+            }
+
+
+
+            //Experimental end
+
+
             timeLabel.Text = sure.ToString();
             sure++;
             sureSaniye = sure / 5;
@@ -211,25 +228,21 @@ namespace AtYarisiV1
             //Finish Check
             if (pictureBox1.Width + pictureBox1.Left >= bitisUzaklik)
             {
-                timer1.Enabled = false;
+                timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Gülbatur kazandı";
             }
 
             if (pictureBox2.Width + pictureBox2.Left >= bitisUzaklik)
             {
-                timer1.Enabled = false;
+                timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Şahbatur kazandı";
             }
 
             if (pictureBox3.Width + pictureBox3.Left >= bitisUzaklik)
             {
-                timer1.Enabled = false;
+                timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Hidalgo kazandı";
             }
-
-
         }
-        
-
     }
 }
