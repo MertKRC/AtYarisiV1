@@ -14,7 +14,7 @@ I'm open for any advices or ideas.
 
 Change Log:
 -------------------------------
-Oct 21, 2019 Features
+Oct 21, 2019 Features;
 
 Added files via upload
 
@@ -22,11 +22,11 @@ Create README.md
 
 -------------------------------
 
-Oct 22, 2019 Features
+Oct 22, 2019 Features;
 
 Reset button added, variables moved to global.
 
-Basic fron-end features
+Basic front-end features
 
 Color change
 
@@ -44,8 +44,10 @@ Added try catch block to avoid program shutdown when try to start with .exe file
 
 -------------------------------
 
-Oct 23, 2019 Features
+Oct 23, 2019 Features;
 
 500m issue fixed
 
 Made code more readable
+
+Reset button timer issue resolved
