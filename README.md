@@ -46,8 +46,17 @@ Added try catch block to avoid program shutdown when try to start with .exe file
 
 Oct 23, 2019 Features;
 
-500m issue fixed
+500m second timer issue fixed
 
 Made code more readable
 
 Reset button timer issue resolved
+
+-------------------------------
+
+Oct 24, 2019 Features;
+
+500m reset button issue fixed
+
+New race background music and play button functionalty upcoming
+
