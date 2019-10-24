@@ -21,17 +21,7 @@ namespace AtYarisiV1
         {
             InitializeComponent();
             //Reset all start points on create
-            pictureBox1.Left = 32;
-            at1label.Left = 45;
-            at1500Label.Left = 45;
-
-            pictureBox2.Left = 32;
-            at2label.Left = 45;
-            at1500Label.Left = 45;
-
-            pictureBox3.Left = 32;
-            at3label.Left = 45;
-            at1500Label.Left = 45;
+            AtSifirla();
 
             //Automatically refers to programs Bin\Debug folder
             string dizin = Application.StartupPath.ToString();
@@ -104,14 +94,6 @@ namespace AtYarisiV1
 
             //Horse and label positions
 
-            pictureBox1.Left = 45;
-            at1label.Left = 45;
-
-            pictureBox2.Left = 45;
-            at2label.Left = 45;
-
-            pictureBox3.Left = 45;
-            at3label.Left = 45;
             AtSifirla();
 
         }
@@ -141,6 +123,16 @@ namespace AtYarisiV1
         }
         void AtSifirla()
         {
+            pictureBox1.Left = 45;
+            pictureBox2.Left = 45;
+            pictureBox3.Left = 45;
+
+
+            at1label.Left = 45;
+            at2label.Left = 45;
+            at3label.Left = 45;
+
+
             at1500Label.Left = 45;
             at2500Label.Left = 45;
             at3500Label.Left = 45;
@@ -161,6 +153,7 @@ namespace AtYarisiV1
 
             //Experimental end
 
+            //If control to avoid time and checkpoint 
             if (TimeFlag != 0)
             {
                 sure = 0;
@@ -235,21 +228,18 @@ namespace AtYarisiV1
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Gülbatur kazandı";
-                AtSifirla();
             }
 
             if (pictureBox2.Width + pictureBox2.Left >= bitisUzaklik)
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Şahbatur kazandı";
-                AtSifirla();
             }
 
             if (pictureBox3.Width + pictureBox3.Left >= bitisUzaklik)
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Hidalgo kazandı";
-                AtSifirla();
             }
         }
     }
