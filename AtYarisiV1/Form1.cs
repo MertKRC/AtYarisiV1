@@ -83,7 +83,6 @@ namespace AtYarisiV1
                 MusicPlay(2);
             }
         }
-
         private void ResetButton_Click(object sender, EventArgs e)
         {
             //All changes below is reset all values to default as application start
@@ -95,8 +94,8 @@ namespace AtYarisiV1
             yarisBilgisiLabel.Text = "...";
             yarisBilgisi2Label.Text = "...";
 
-            CheckpointFlag = 0;
             TimeFlag++;
+            CheckpointFlag++;
 
 
             timer1.Stop();
@@ -105,17 +104,15 @@ namespace AtYarisiV1
 
             //Horse and label positions
 
-            pictureBox1.Left = 32;
+            pictureBox1.Left = 45;
             at1label.Left = 45;
-            at1500Label.Left = 45;
 
-            pictureBox2.Left = 32;
+            pictureBox2.Left = 45;
             at2label.Left = 45;
-            at1500Label.Left = 45;
 
-            pictureBox3.Left = 32;
+            pictureBox3.Left = 45;
             at3label.Left = 45;
-            at1500Label.Left = 45;
+            AtSifirla();
 
         }
 
@@ -142,6 +139,12 @@ namespace AtYarisiV1
                 axWindowsMediaPlayer1.Ctlcontrols.stop();
             }
         }
+        void AtSifirla()
+        {
+            at1500Label.Left = 45;
+            at2500Label.Left = 45;
+            at3500Label.Left = 45;
+        }
 
         //Define all variables in global scope to avoid unnecessary RAM usage
         Random random = new Random();
@@ -153,16 +156,17 @@ namespace AtYarisiV1
         private void Timer1_Tick(object sender, EventArgs e)
         {
             //Experimental start
-            if(TimeFlag != 0)
-            {
-                sure = 0;
-                yarisBilgisi2Label.Text = "...";
-                TimeFlag = 0;
-            }
 
 
 
             //Experimental end
+
+            if (TimeFlag != 0)
+            {
+                sure = 0;
+                TimeFlag = 0;
+                CheckpointFlag = 0;
+            }
 
 
             timeLabel.Text = sure.ToString();
@@ -190,7 +194,7 @@ namespace AtYarisiV1
 
             pictureBox3.Left += ucuncuAt;
             at3label.Left += ucuncuAt;
-            label13.Left += ucuncuAt;
+            at3500Label.Left += ucuncuAt;
 
             //Who is leading check
             if (pictureBox1.Left > pictureBox2.Left && pictureBox1.Left > pictureBox3.Left)
@@ -211,6 +215,7 @@ namespace AtYarisiV1
             {
                 yarisBilgisi2Label.Text = "500m'ye Gülbatur önde girdi";
                 CheckpointFlag++;
+
             }
 
             else if (pictureBox2.Width + at2500Label.Left >= ortaUzaklik && CheckpointFlag == 0)
@@ -219,7 +224,7 @@ namespace AtYarisiV1
                 CheckpointFlag++;
             }
 
-            else if (pictureBox3.Width + label13.Left >= ortaUzaklik && CheckpointFlag == 0)
+            else if (pictureBox3.Width + at3500Label.Left >= ortaUzaklik && CheckpointFlag == 0)
             {
                 yarisBilgisi2Label.Text = "500m'ye Hidalgo önde girdi";
                 CheckpointFlag++;
@@ -230,18 +235,21 @@ namespace AtYarisiV1
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Gülbatur kazandı";
+                AtSifirla();
             }
 
             if (pictureBox2.Width + pictureBox2.Left >= bitisUzaklik)
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Şahbatur kazandı";
+                AtSifirla();
             }
 
             if (pictureBox3.Width + pictureBox3.Left >= bitisUzaklik)
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Hidalgo kazandı";
+                AtSifirla();
             }
         }
     }
