@@ -111,5 +111,17 @@
   <ItemGroup>
     <None Include="Resources\grass-texture-green-wallpaper.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\gri.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\kirmizi.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\mavi.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\wave.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

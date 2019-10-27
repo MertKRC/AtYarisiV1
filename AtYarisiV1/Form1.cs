@@ -37,36 +37,84 @@ namespace AtYarisiV1
             }
             
         }
-        private void ClearLabel()
+        private void ClearLabel(int mode)
         {
-            //            Label[] labels = new Label[]{
-            //    lbl100, lbl101, lbl102, lbl103, lbl104, lbl105, lbl106, lbl107, lbl108
-            //};
             Label[] labels = new Label[]
             {
-                label3,label8,label9,label5,label6,label7,label10,label11,label12,label14,label15,checkpointLabel,finishLabel
+                label3,label8,label9,label5,label6,label7,label10,label11,label12,label14,label15,checkpointLabel
             };
             for (int i = 0; i < labels.Length; i++)
             {
-                labels[i].BackColor = Color.Red;
+                if(mode == 1)
+                {
+                    labels[i].Visible = false;
+                }
+                else
+                {
+                    labels[i].Visible = true;
+                }
             }
 
+        }
+        private void ClearWave(int mode)
+        {
+            PictureBox[] waves = new PictureBox[]
+            {
+                wave1,wave2,wave3
+            };
+            for(int i = 0; i < waves.Length; i++)
+            {
+                if(mode == 1)
+                {
+                    waves[i].Visible = true;
+                }
+                else
+                {
+                    waves[i].Visible = false;
+                }
+            }
         }
 
         //Sea Mode
         private void SeaColors()
         {
-            ClearLabel();
+            ClearLabel(1);
+            ClearWave(1);
             this.BackColor = Color.FromArgb(0, 123, 255);
-            pictureBox1.Image = dizin + "\\Images\\kirmizi.gif";
-
+            this.Text = "Mert KARACA - Deniz Atı Yarışı";
+            pictureBox1.Image = Image.FromFile(dizin + "\\Images\\kirmizi.gif");
+            pictureBox2.Image = Image.FromFile(dizin + "\\Images\\gri.gif");
+            pictureBox3.Image = Image.FromFile(dizin + "\\Images\\mavi.gif");
+            label16.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            label17.BackColor = System.Drawing.SystemColors.MenuHighlight;
         }
-        private void SeaHorse_Click(object sender, EventArgs e)
+        private void LandColors()
         {
-            SeaColors();
+            ClearLabel(2);
+            ClearWave(2);
+            this.BackColor = Color.Green;
+            this.Text = "Mert KARACA - At Yarışı";
+            pictureBox1.Image = Image.FromFile(dizin + "\\Images\\1.gif");
+            pictureBox2.Image = Image.FromFile(dizin + "\\Images\\2.gif");
+            pictureBox3.Image = Image.FromFile(dizin + "\\Images\\3.gif");
+            label16.BackColor = Color.Green;
+            label17.BackColor = Color.Green;
         }
         //Sea Mode end
+        private void RaceMode_Click(object sender, EventArgs e)
+        {
+            if(raceMode.Text == "Deniz")
+            {
+                SeaColors();
+                raceMode.Text = "Kara";
+            }
+            else
+            {
+                LandColors();
+                raceMode.Text = "Deniz";
 
+            }
+        }
 
         //Start-Stop button
 
@@ -175,7 +223,6 @@ namespace AtYarisiV1
         int sure = 0, sureSaniye;
         int ortaUzaklik, bitisUzaklik;
         int birinciAt, ikinciAt, ucuncuAt;
-
 
         int CheckpointFlag = 0;
         int TimeFlag;
