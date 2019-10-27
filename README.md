@@ -67,3 +67,9 @@ Oct 27, 2019 Features;
 New sea race mode added !
 
 Color and text optimizations
+
+-------------------------------
+
+Oct 28, 2019 Features;
+
+Race situation labels and change dynamically now
