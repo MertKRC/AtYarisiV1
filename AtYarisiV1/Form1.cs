@@ -12,11 +12,12 @@ namespace AtYarisiV1
 {
     public partial class Form1 : Form
     {
-        //Problem list;
-        //When reset button clicked timer stops and second text going 0 but if start button clicked after that, second turn back to last state
+        //Todo list
+        //Seahorse mode upcoming
         //Will add horse sfx on start button click
         //Will add another music to play button
         //Create a class for horses and call all horses from there
+        string dizin;
         public Form1()
         {
             InitializeComponent();
@@ -24,11 +25,11 @@ namespace AtYarisiV1
             AtSifirla();
 
             //Automatically refers to programs Bin\Debug folder
-            string dizin = Application.StartupPath.ToString();
+            dizin = Application.StartupPath.ToString();
             try
             {
                 //Find better way to do this or make it work with standalone .exe file
-                axWindowsMediaPlayer1.URL = dizin + "\\blabla.mp3";
+                axWindowsMediaPlayer1.URL = dizin + "\\Sounds\\blabla.mp3";
             }
             catch
             {
@@ -36,8 +37,39 @@ namespace AtYarisiV1
             }
             
         }
+        private void ClearLabel()
+        {
+            //            Label[] labels = new Label[]{
+            //    lbl100, lbl101, lbl102, lbl103, lbl104, lbl105, lbl106, lbl107, lbl108
+            //};
+            Label[] labels = new Label[]
+            {
+                label3,label8,label9,label5,label6,label7,label10,label11,label12,label14,label15,checkpointLabel,finishLabel
+            };
+            for (int i = 0; i < labels.Length; i++)
+            {
+                labels[i].BackColor = Color.Red;
+            }
+
+        }
+
+        //Sea Mode
+        private void SeaColors()
+        {
+            ClearLabel();
+            this.BackColor = Color.FromArgb(0, 123, 255);
+            pictureBox1.Image = dizin + "\\Images\\kirmizi.gif";
+
+        }
+        private void SeaHorse_Click(object sender, EventArgs e)
+        {
+            SeaColors();
+        }
+        //Sea Mode end
+
 
         //Start-Stop button
+
         private void StartButton_Click(object sender, EventArgs e)
         {
             //It's just for using same button both for start and stop purposes
@@ -143,6 +175,8 @@ namespace AtYarisiV1
         int sure = 0, sureSaniye;
         int ortaUzaklik, bitisUzaklik;
         int birinciAt, ikinciAt, ucuncuAt;
+
+
         int CheckpointFlag = 0;
         int TimeFlag;
         private void Timer1_Tick(object sender, EventArgs e)

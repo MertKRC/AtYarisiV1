@@ -65,6 +65,7 @@
             this.at1500Label = new System.Windows.Forms.Label();
             this.at2500Label = new System.Windows.Forms.Label();
             this.at3500Label = new System.Windows.Forms.Label();
+            this.seaHorse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -433,7 +434,7 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1282, 708);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1475, 783);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(202, 67);
@@ -475,12 +476,27 @@
             this.at3500Label.TabIndex = 33;
             this.at3500Label.Visible = false;
             // 
+            // seaHorse
+            // 
+            this.seaHorse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(51)))));
+            this.seaHorse.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.seaHorse.ForeColor = System.Drawing.SystemColors.Control;
+            this.seaHorse.Location = new System.Drawing.Point(1282, 722);
+            this.seaHorse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.seaHorse.Name = "seaHorse";
+            this.seaHorse.Size = new System.Drawing.Size(104, 51);
+            this.seaHorse.TabIndex = 34;
+            this.seaHorse.Text = "Deniz";
+            this.seaHorse.UseVisualStyleBackColor = false;
+            this.seaHorse.Click += new System.EventHandler(this.SeaHorse_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1689, 878);
+            this.Controls.Add(this.seaHorse);
             this.Controls.Add(this.at3500Label);
             this.Controls.Add(this.at2500Label);
             this.Controls.Add(this.at1500Label);
@@ -515,6 +531,7 @@
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Mert KARACA - At Yarışı";
@@ -564,6 +581,7 @@
         private System.Windows.Forms.Label at1500Label;
         private System.Windows.Forms.Label at2500Label;
         private System.Windows.Forms.Label at3500Label;
+        private System.Windows.Forms.Button seaHorse;
     }
 }
 
