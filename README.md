@@ -60,3 +60,8 @@ Oct 24, 2019 Features;
 
 New race background music and play button functionalty upcoming
 
+-------------------------------
+
+Oct 27, 2019 Features;
+
+New sea race mode upcoming !
