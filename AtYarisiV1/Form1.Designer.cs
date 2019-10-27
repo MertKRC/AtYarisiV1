@@ -93,7 +93,7 @@
             // at2label
             // 
             this.at2label.AutoSize = true;
-            this.at2label.BackColor = System.Drawing.Color.Red;
+            this.at2label.BackColor = System.Drawing.Color.Green;
             this.at2label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.at2label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.at2label.Location = new System.Drawing.Point(45, 151);
@@ -105,7 +105,7 @@
             // at3label
             // 
             this.at3label.AutoSize = true;
-            this.at3label.BackColor = System.Drawing.Color.Red;
+            this.at3label.BackColor = System.Drawing.Color.Green;
             this.at3label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.at3label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.at3label.Location = new System.Drawing.Point(45, 291);
@@ -183,7 +183,7 @@
             // at1label
             // 
             this.at1label.AutoSize = true;
-            this.at1label.BackColor = System.Drawing.Color.Red;
+            this.at1label.BackColor = System.Drawing.Color.Green;
             this.at1label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.at1label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.at1label.Location = new System.Drawing.Point(45, 22);
@@ -423,7 +423,7 @@
             // 
             // raceMode
             // 
-            this.raceMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(51)))));
+            this.raceMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.raceMode.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.raceMode.ForeColor = System.Drawing.SystemColors.Control;
             this.raceMode.Location = new System.Drawing.Point(855, 469);
@@ -512,6 +512,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1126, 571);
+            this.Controls.Add(this.finishLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -527,7 +528,6 @@
             this.Controls.Add(this.at1500Label);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.play);
-            this.Controls.Add(this.finishLabel);
             this.Controls.Add(this.at3label);
             this.Controls.Add(this.at2label);
             this.Controls.Add(this.at1label);

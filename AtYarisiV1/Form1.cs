@@ -85,8 +85,14 @@ namespace AtYarisiV1
             pictureBox1.Image = Image.FromFile(dizin + "\\Images\\kirmizi.gif");
             pictureBox2.Image = Image.FromFile(dizin + "\\Images\\gri.gif");
             pictureBox3.Image = Image.FromFile(dizin + "\\Images\\mavi.gif");
-            label16.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            label17.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            label16.BackColor = Color.FromArgb(0, 123, 255);
+            label17.BackColor = Color.FromArgb(0, 123, 255);
+            at1label.BackColor = Color.FromArgb(0, 123, 255);
+            at2label.BackColor = Color.FromArgb(0, 123, 255);
+            at3label.BackColor = Color.FromArgb(0, 123, 255);
+            at1label.Text = "Gülsubatur";
+            at2label.Text = "Şahsubatur";
+            at3label.Text = "Hidalsu";
         }
         private void LandColors()
         {
@@ -99,6 +105,12 @@ namespace AtYarisiV1
             pictureBox3.Image = Image.FromFile(dizin + "\\Images\\3.gif");
             label16.BackColor = Color.Green;
             label17.BackColor = Color.Green;
+            at1label.BackColor = Color.Green;
+            at2label.BackColor = Color.Green;
+            at3label.BackColor = Color.Green;
+            at1label.Text = "Gülbatur";
+            at2label.Text = "Şahbatur";
+            at3label.Text = "Hidalgo";
         }
         //Sea Mode end
         private void RaceMode_Click(object sender, EventArgs e)
@@ -107,11 +119,13 @@ namespace AtYarisiV1
             {
                 SeaColors();
                 raceMode.Text = "Kara";
+                raceMode.BackColor = Color.Green;
             }
             else
             {
                 LandColors();
                 raceMode.Text = "Deniz";
+                raceMode.BackColor = Color.FromArgb(0, 123, 255);
 
             }
         }
