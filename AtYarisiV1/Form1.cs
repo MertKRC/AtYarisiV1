@@ -287,34 +287,34 @@ namespace AtYarisiV1
             //Who is leading check
             if (pictureBox1.Left > pictureBox2.Left && pictureBox1.Left > pictureBox3.Left)
             {
-                yarisBilgisiLabel.Text = "1 Numaralı Gülbatur önde";
+                yarisBilgisiLabel.Text = "1 Numaralı " + at1label.Text + " önde";
             }
             if (pictureBox2.Left > pictureBox1.Left && pictureBox2.Left > pictureBox3.Left)
             {
-                yarisBilgisiLabel.Text = "2 Numaralı Şahbatur önde";
+                yarisBilgisiLabel.Text = "1 Numaralı " + at2label.Text + " önde";
             }
             if (pictureBox3.Left > pictureBox1.Left && pictureBox3.Left > pictureBox2.Left)
             {
-                yarisBilgisiLabel.Text = "3 Numaralı Hidalgo önde";
+                yarisBilgisiLabel.Text = "1 Numaralı " + at3label.Text + " önde";
             }
 
             //Checkpoint Check
             if (pictureBox1.Width + at1500Label.Left >= ortaUzaklik && CheckpointFlag == 0)
             {
-                yarisBilgisi2Label.Text = "500m'ye Gülbatur önde girdi";
+                yarisBilgisi2Label.Text = "500m'ye " + at1label.Text + " önde girdi";
                 CheckpointFlag++;
 
             }
 
             else if (pictureBox2.Width + at2500Label.Left >= ortaUzaklik && CheckpointFlag == 0)
             {
-                yarisBilgisi2Label.Text = "500m'ye Şahbatur önde girdi";
+                yarisBilgisi2Label.Text = "500m'ye " + at2label.Text + " önde girdi";
                 CheckpointFlag++;
             }
 
             else if (pictureBox3.Width + at3500Label.Left >= ortaUzaklik && CheckpointFlag == 0)
             {
-                yarisBilgisi2Label.Text = "500m'ye Hidalgo önde girdi";
+                yarisBilgisi2Label.Text = "500m'ye " + at3label.Text + " önde girdi";
                 CheckpointFlag++;
             }
 
@@ -322,19 +322,19 @@ namespace AtYarisiV1
             if (pictureBox1.Width + pictureBox1.Left >= bitisUzaklik)
             {
                 timer1.Stop();
-                yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Gülbatur kazandı";
+                yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at1label.Text + " kazandı";
             }
 
             if (pictureBox2.Width + pictureBox2.Left >= bitisUzaklik)
             {
                 timer1.Stop();
-                yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Şahbatur kazandı";
+                yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at2label.Text + " kazandı";
             }
 
             if (pictureBox3.Width + pictureBox3.Left >= bitisUzaklik)
             {
                 timer1.Stop();
-                yarisBilgisiLabel.Text = "50. yıl gazi koşusunu Hidalgo kazandı";
+                yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at3label.Text + " kazandı";
             }
         }
     }
