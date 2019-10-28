@@ -12,12 +12,21 @@ namespace AtYarisiV1
 {
     public partial class Form1 : Form
     {
-        //Todo list
-        //Seahorse mode upcoming
-        //Will add horse sfx on start button click
-        //Will add another music to play button
+
+        //Todo list;
         //Create a class for horses and call all horses from there
+
+
+        //Define all variables in global scope to avoid unnecessary RAM usage
+        Random random = new Random();
+        int sure = 0, sureSaniye;
+        int ortaUzaklik, bitisUzaklik;
+        int birinciAt, ikinciAt, ucuncuAt;
         string dizin;
+
+        int CheckpointFlag = 0;
+        int TimeFlag;
+
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +39,8 @@ namespace AtYarisiV1
             {
                 //Find better way to do this or make it work with standalone .exe file
                 axWindowsMediaPlayer1.URL = dizin + "\\Sounds\\blabla.mp3";
+                axWindowsMediaPlayer2.URL = dizin + "\\Sounds\\HorseSfx.mp3";
+                axWindowsMediaPlayer2.Ctlcontrols.stop();
             }
             catch
             {
@@ -37,6 +48,7 @@ namespace AtYarisiV1
             }
             
         }
+        //Sea Mode
         private void ClearLabel(int mode)
         {
             Label[] labels = new Label[]
@@ -74,8 +86,6 @@ namespace AtYarisiV1
                 }
             }
         }
-
-        //Sea Mode
         private void SeaColors()
         {
             ClearLabel(1);
@@ -112,10 +122,9 @@ namespace AtYarisiV1
             at2label.Text = "Şahbatur";
             at3label.Text = "Hidalgo";
         }
-        //Sea Mode end
         private void RaceMode_Click(object sender, EventArgs e)
         {
-            if(raceMode.Text == "Deniz")
+            if (raceMode.Text == "Deniz")
             {
                 SeaColors();
                 raceMode.Text = "Kara";
@@ -129,6 +138,7 @@ namespace AtYarisiV1
 
             }
         }
+        //Sea Mode end
 
         //Start-Stop button
 
@@ -140,14 +150,14 @@ namespace AtYarisiV1
                 timer1.Start();
                 startButton.Text = "Durdur";
                 startButton.BackColor = Color.FromArgb(255, 53, 71);
-                MusicPlay(1);
+                HorseSfx(1);
             }
             else
             {
                 timer1.Stop();
                 startButton.Text = "Başlat";
                 startButton.BackColor = Color.FromArgb(0, 200, 81);
-                MusicPlay(2);
+                HorseSfx(2);
             }
         }
 
@@ -169,9 +179,7 @@ namespace AtYarisiV1
         }
         private void ResetButton_Click(object sender, EventArgs e)
         {
-            //All changes below is reset all values to default as application start
-
-            //Time labels not working properly. When start button clicked after reset button, this values turn back to saved ones.
+            //All changes below resets all values to default as application start
             timeLabel.Text = "0";
             time2label.Text = "0";
 
@@ -181,15 +189,12 @@ namespace AtYarisiV1
             TimeFlag++;
             CheckpointFlag++;
 
-
             timer1.Stop();
             startButton.Text = "Başlat";
             startButton.BackColor = Color.FromArgb(0, 200, 81);
 
-            //Horse and label positions
-
             AtSifirla();
-
+            HorseSfx(2);
         }
 
         //Function for create random int value
@@ -215,38 +220,39 @@ namespace AtYarisiV1
                 axWindowsMediaPlayer1.Ctlcontrols.stop();
             }
         }
+
+        void HorseSfx(int deger)
+        {
+            if (deger == 1)
+            {
+                axWindowsMediaPlayer2.Ctlcontrols.play();
+            }
+            else if (deger == 2)
+            {
+                axWindowsMediaPlayer2.Ctlcontrols.pause();
+            }
+            else if (deger == 3)
+            {
+                axWindowsMediaPlayer2.Ctlcontrols.stop();
+            }
+        }
         void AtSifirla()
         {
             pictureBox1.Left = 45;
             pictureBox2.Left = 45;
             pictureBox3.Left = 45;
 
-
             at1label.Left = 45;
             at2label.Left = 45;
             at3label.Left = 45;
-
 
             at1500Label.Left = 45;
             at2500Label.Left = 45;
             at3500Label.Left = 45;
         }
 
-        //Define all variables in global scope to avoid unnecessary RAM usage
-        Random random = new Random();
-        int sure = 0, sureSaniye;
-        int ortaUzaklik, bitisUzaklik;
-        int birinciAt, ikinciAt, ucuncuAt;
-
-        int CheckpointFlag = 0;
-        int TimeFlag;
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            //Experimental start
-
-
-
-            //Experimental end
 
             //If control to avoid time and checkpoint 
             if (TimeFlag != 0)

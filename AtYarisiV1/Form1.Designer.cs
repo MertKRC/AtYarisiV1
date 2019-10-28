@@ -70,6 +70,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.wave2 = new System.Windows.Forms.PictureBox();
             this.wave3 = new System.Windows.Forms.PictureBox();
+            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wave1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -77,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wave2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wave3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -382,7 +384,7 @@
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(1475, 783);
-            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(202, 67);
@@ -444,7 +446,7 @@
             // 
             this.wave1.BackgroundImage = global::AtYarisiV1.Properties.Resources.wave;
             this.wave1.Location = new System.Drawing.Point(25, 108);
-            this.wave1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.wave1.Margin = new System.Windows.Forms.Padding(2);
             this.wave1.Name = "wave1";
             this.wave1.Size = new System.Drawing.Size(1075, 32);
             this.wave1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -506,12 +508,23 @@
             this.wave3.TabStop = false;
             this.wave3.Visible = false;
             // 
+            // axWindowsMediaPlayer2
+            // 
+            this.axWindowsMediaPlayer2.Enabled = true;
+            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(930, 470);
+            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
+            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(75, 23);
+            this.axWindowsMediaPlayer2.TabIndex = 39;
+            this.axWindowsMediaPlayer2.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1126, 571);
+            this.Controls.Add(this.axWindowsMediaPlayer2);
             this.Controls.Add(this.finishLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -560,6 +573,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wave2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wave3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,6 +621,7 @@
         private System.Windows.Forms.PictureBox wave1;
         private System.Windows.Forms.PictureBox wave2;
         private System.Windows.Forms.PictureBox wave3;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
     }
 }
 
