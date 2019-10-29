@@ -73,3 +73,9 @@ Color and text optimizations
 Oct 28, 2019 Features;
 
 Race situation labels and change dynamically now
+
+-------------------------------
+
+Oct 29, 2019 Features;
+
+New horse sfx added. It starts and ends with the horses.
