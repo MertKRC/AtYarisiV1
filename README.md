@@ -84,4 +84,4 @@ New horse sfx added. It starts and ends with the horses.
 
 Oct 30, 2019 Features;
 
-New scoreboard upcoming !
+New scoreboard available now ! There are a few updates to do...
