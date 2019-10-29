@@ -71,8 +71,10 @@
             this.wave2 = new System.Windows.Forms.PictureBox();
             this.wave3 = new System.Windows.Forms.PictureBox();
             this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.goldLabel = new System.Windows.Forms.Label();
+            this.silverLabel = new System.Windows.Forms.Label();
+            this.bronzeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wave1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -374,7 +376,7 @@
             this.play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
             this.play.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.play.ForeColor = System.Drawing.SystemColors.Control;
-            this.play.Location = new System.Drawing.Point(911, 509);
+            this.play.Location = new System.Drawing.Point(1024, 497);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(69, 33);
             this.play.TabIndex = 28;
@@ -430,7 +432,7 @@
             this.raceMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.raceMode.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.raceMode.ForeColor = System.Drawing.SystemColors.Control;
-            this.raceMode.Location = new System.Drawing.Point(911, 469);
+            this.raceMode.Location = new System.Drawing.Point(1024, 457);
             this.raceMode.Name = "raceMode";
             this.raceMode.Size = new System.Drawing.Size(69, 33);
             this.raceMode.TabIndex = 35;
@@ -520,28 +522,49 @@
             this.axWindowsMediaPlayer2.TabIndex = 39;
             this.axWindowsMediaPlayer2.Visible = false;
             // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(746, 440);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 104);
-            this.listBox1.TabIndex = 40;
-            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Green;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(742, 411);
+            this.label2.Location = new System.Drawing.Point(784, 418);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 26);
             this.label2.TabIndex = 41;
             this.label2.Text = "Kazananlar";
+            // 
+            // goldLabel
+            // 
+            this.goldLabel.BackColor = System.Drawing.Color.Green;
+            this.goldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.goldLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.goldLabel.Location = new System.Drawing.Point(755, 453);
+            this.goldLabel.Name = "goldLabel";
+            this.goldLabel.Size = new System.Drawing.Size(263, 26);
+            this.goldLabel.TabIndex = 42;
+            this.goldLabel.Text = "1.";
+            // 
+            // silverLabel
+            // 
+            this.silverLabel.BackColor = System.Drawing.Color.Green;
+            this.silverLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.silverLabel.ForeColor = System.Drawing.Color.Silver;
+            this.silverLabel.Location = new System.Drawing.Point(755, 479);
+            this.silverLabel.Name = "silverLabel";
+            this.silverLabel.Size = new System.Drawing.Size(263, 26);
+            this.silverLabel.TabIndex = 43;
+            this.silverLabel.Text = "2.";
+            // 
+            // bronzeLabel
+            // 
+            this.bronzeLabel.BackColor = System.Drawing.Color.Green;
+            this.bronzeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bronzeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bronzeLabel.Location = new System.Drawing.Point(755, 505);
+            this.bronzeLabel.Name = "bronzeLabel";
+            this.bronzeLabel.Size = new System.Drawing.Size(263, 26);
+            this.bronzeLabel.TabIndex = 44;
+            this.bronzeLabel.Text = "3.";
             // 
             // Form1
             // 
@@ -549,8 +572,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1126, 571);
+            this.Controls.Add(this.bronzeLabel);
+            this.Controls.Add(this.silverLabel);
+            this.Controls.Add(this.goldLabel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.axWindowsMediaPlayer2);
             this.Controls.Add(this.finishLabel);
             this.Controls.Add(this.label5);
@@ -649,8 +674,10 @@
         private System.Windows.Forms.PictureBox wave2;
         private System.Windows.Forms.PictureBox wave3;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label goldLabel;
+        private System.Windows.Forms.Label silverLabel;
+        private System.Windows.Forms.Label bronzeLabel;
     }
 }
 

@@ -250,6 +250,7 @@ namespace AtYarisiV1
             at3500Label.Left = 45;
         }
 
+        int at1win = 0, at2win = 0, at3win = 0;
         private void Timer1_Tick(object sender, EventArgs e)
         {
 
@@ -322,28 +323,96 @@ namespace AtYarisiV1
                 yarisBilgisi2Label.Text = "500m'ye " + at3label.Text + " önde girdi";
                 CheckpointFlag++;
             }
-
             //Finish Check
             if (pictureBox1.Width + pictureBox1.Left >= bitisUzaklik)
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at1label.Text + " kazandı";
-                listBox1.Text = at1label.Text + " kazandı";
+                at1win++;
             }
 
             if (pictureBox2.Width + pictureBox2.Left >= bitisUzaklik)
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at2label.Text + " kazandı";
-                listBox1.Text = at2label.Text + " kazandı";
+                at2win++;
             }
 
             if (pictureBox3.Width + pictureBox3.Left >= bitisUzaklik)
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at3label.Text + " kazandı";
-                listBox1.Text = at3label.Text + " kazandı";
+                at3win++;
             }
+
+            //Winner check
+            if(at1win > at2win && at1win > at3win)
+            {
+                goldLabel.Text = "1. " + at1label.Text;
+                if(at2win > at3win)
+                {
+                    silverLabel.Text = "2. " + at2label.Text;
+                    bronzeLabel.Text = "3. " + at3label.Text;
+                }
+                else if(at3win > at2win)
+                {
+                    silverLabel.Text = "2. " + at3label.Text;
+                    bronzeLabel.Text = "3. " + at2label.Text;
+                }
+                else if(at2win == at3win)
+                {
+                    silverLabel.Text = "2. " + at2label.Text + " ve " + at3label.Text;
+                    bronzeLabel.Text = "3. Boş";
+                }
+            }
+
+            else if(at2win > at1win && at2win > at3win)
+            {
+                goldLabel.Text = "1. " + at2label.Text;
+                if (at1win > at3win)
+                {
+                    silverLabel.Text = "2. " + at1label.Text;
+                    bronzeLabel.Text = "3. " + at3label.Text;
+                }
+                else if (at3win > at1win)
+                {
+                    silverLabel.Text = "2. " + at3label.Text;
+                    bronzeLabel.Text = "3. " + at1label.Text;
+                }
+                else if (at1win == at3win)
+                {
+                    silverLabel.Text = "2. " + at1label.Text + " ve " + at3label.Text;
+                    bronzeLabel.Text = "3. Boş";
+                }
+            }
+
+            else if(at3win > at1win && at3win > at2win)
+            {
+                goldLabel.Text = "1. " + at3label.Text;
+                if (at1win > at2win)
+                {
+                    silverLabel.Text = "2. " + at1label.Text;
+                    bronzeLabel.Text = "3. " + at2label.Text;
+                }
+                else if (at2win > at1win)
+                {
+                    silverLabel.Text = "2. " + at2label.Text;
+                    bronzeLabel.Text = "3. " + at1label.Text;
+                }
+                else if (at1win == at2win)
+                {
+                    silverLabel.Text = "2. " + at1label.Text + " ve " + at2label.Text;
+                    bronzeLabel.Text = "3. Boş";
+                }
+            }
+
+            else if(at1win == at2win && at2win == at3win)
+            {
+                goldLabel.Text = "Skorlar eşit, lütfen bir maç oynayın";
+                silverLabel.Text = "Skorlar eşit, lütfen bir maç oynayın";
+                bronzeLabel.Text = "Skorlar eşit, lütfen bir maç oynayın";
+            }
+            //Winner check end
         }
     }
 }
