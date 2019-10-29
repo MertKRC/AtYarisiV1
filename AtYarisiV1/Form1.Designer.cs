@@ -71,6 +71,8 @@
             this.wave2 = new System.Windows.Forms.PictureBox();
             this.wave3 = new System.Windows.Forms.PictureBox();
             this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wave1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -327,7 +329,7 @@
             this.timeLabel.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.timeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.timeLabel.Location = new System.Drawing.Point(779, 509);
+            this.timeLabel.Location = new System.Drawing.Point(1077, 9);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(37, 33);
             this.timeLabel.TabIndex = 25;
@@ -372,7 +374,7 @@
             this.play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
             this.play.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.play.ForeColor = System.Drawing.SystemColors.Control;
-            this.play.Location = new System.Drawing.Point(855, 509);
+            this.play.Location = new System.Drawing.Point(911, 509);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(69, 33);
             this.play.TabIndex = 28;
@@ -428,7 +430,7 @@
             this.raceMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.raceMode.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.raceMode.ForeColor = System.Drawing.SystemColors.Control;
-            this.raceMode.Location = new System.Drawing.Point(855, 469);
+            this.raceMode.Location = new System.Drawing.Point(911, 469);
             this.raceMode.Name = "raceMode";
             this.raceMode.Size = new System.Drawing.Size(69, 33);
             this.raceMode.TabIndex = 35;
@@ -511,12 +513,35 @@
             // axWindowsMediaPlayer2
             // 
             this.axWindowsMediaPlayer2.Enabled = true;
-            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(930, 470);
+            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(1039, 536);
             this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
             this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
             this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(75, 23);
             this.axWindowsMediaPlayer2.TabIndex = 39;
             this.axWindowsMediaPlayer2.Visible = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(746, 440);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 104);
+            this.listBox1.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Green;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(742, 411);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 26);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Kazananlar";
             // 
             // Form1
             // 
@@ -524,6 +549,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1126, 571);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.axWindowsMediaPlayer2);
             this.Controls.Add(this.finishLabel);
             this.Controls.Add(this.label5);
@@ -622,6 +649,8 @@
         private System.Windows.Forms.PictureBox wave2;
         private System.Windows.Forms.PictureBox wave3;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

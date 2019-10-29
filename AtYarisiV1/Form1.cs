@@ -16,13 +16,12 @@ namespace AtYarisiV1
         //Todo list;
         //Create a class for horses and call all horses from there
 
-
         //Define all variables in global scope to avoid unnecessary RAM usage
-        Random random = new Random();
+        readonly Random random = new Random();
+        readonly string dizin;
         int sure = 0, sureSaniye;
         int ortaUzaklik, bitisUzaklik;
         int birinciAt, ikinciAt, ucuncuAt;
-        string dizin;
 
         int CheckpointFlag = 0;
         int TimeFlag;
@@ -329,18 +328,21 @@ namespace AtYarisiV1
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at1label.Text + " kazandı";
+                listBox1.Text = at1label.Text + " kazandı";
             }
 
             if (pictureBox2.Width + pictureBox2.Left >= bitisUzaklik)
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at2label.Text + " kazandı";
+                listBox1.Text = at2label.Text + " kazandı";
             }
 
             if (pictureBox3.Width + pictureBox3.Left >= bitisUzaklik)
             {
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at3label.Text + " kazandı";
+                listBox1.Text = at3label.Text + " kazandı";
             }
         }
     }
