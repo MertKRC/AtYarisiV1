@@ -14,7 +14,9 @@ namespace AtYarisiV1
     {
 
         //Todo list;
-        //Create a class for horses and call all horses from there
+
+        //Added horsesfx.end to match finish to avoid horsesfx fail
+        //Add details button and a section to see the details for the scoreboard
 
         //Define all variables in global scope to avoid unnecessary RAM usage
         readonly Random random = new Random();
@@ -329,6 +331,7 @@ namespace AtYarisiV1
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at1label.Text + " kazandı";
                 at1win++;
+                HorseSfx(2);
             }
 
             if (pictureBox2.Width + pictureBox2.Left >= bitisUzaklik)
@@ -336,6 +339,7 @@ namespace AtYarisiV1
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at2label.Text + " kazandı";
                 at2win++;
+                HorseSfx(2);
             }
 
             if (pictureBox3.Width + pictureBox3.Left >= bitisUzaklik)
@@ -343,6 +347,7 @@ namespace AtYarisiV1
                 timer1.Stop();
                 yarisBilgisiLabel.Text = "50. yıl gazi koşusunu " + at3label.Text + " kazandı";
                 at3win++;
+                HorseSfx(2);
             }
 
             //Winner check
