@@ -85,3 +85,9 @@ New horse sfx added. It starts and ends with the horses.
 Oct 30, 2019 Features;
 
 New scoreboard available now ! There are a few updates to do...
+
+-------------------------------
+
+Oct 31, 2019 Features;
+
+Horse sfx hotfix. Now the horse sfx ends with the finish line. So sfx does not continue in another race, it starts all over again.
