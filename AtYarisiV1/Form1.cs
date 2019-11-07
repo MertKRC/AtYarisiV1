@@ -100,6 +100,10 @@ namespace AtYarisiV1
             at1label.BackColor = Color.FromArgb(0, 123, 255);
             at2label.BackColor = Color.FromArgb(0, 123, 255);
             at3label.BackColor = Color.FromArgb(0, 123, 255);
+            winnersLabel.BackColor = Color.FromArgb(0, 123, 255);
+            goldLabel.BackColor = Color.FromArgb(0, 123, 255);
+            silverLabel.BackColor = Color.FromArgb(0, 123, 255);
+            bronzeLabel.BackColor = Color.FromArgb(0, 123, 255);
             at1label.Text = "Gülsubatur";
             at2label.Text = "Şahsubatur";
             at3label.Text = "Hidalsu";
@@ -118,6 +122,10 @@ namespace AtYarisiV1
             at1label.BackColor = Color.Green;
             at2label.BackColor = Color.Green;
             at3label.BackColor = Color.Green;
+            winnersLabel.BackColor = Color.Green;
+            goldLabel.BackColor = Color.Green;
+            silverLabel.BackColor = Color.Green;
+            bronzeLabel.BackColor = Color.Green;
             at1label.Text = "Gülbatur";
             at2label.Text = "Şahbatur";
             at3label.Text = "Hidalgo";
@@ -324,6 +332,7 @@ namespace AtYarisiV1
                 yarisBilgisi2Label.Text = "500m'ye " + at3label.Text + " önde girdi";
                 CheckpointFlag++;
             }
+
             //Finish Check
             if (pictureBox1.Width + pictureBox1.Left >= bitisUzaklik)
             {

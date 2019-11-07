@@ -71,10 +71,11 @@
             this.wave2 = new System.Windows.Forms.PictureBox();
             this.wave3 = new System.Windows.Forms.PictureBox();
             this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.label2 = new System.Windows.Forms.Label();
+            this.winnersLabel = new System.Windows.Forms.Label();
             this.goldLabel = new System.Windows.Forms.Label();
             this.silverLabel = new System.Windows.Forms.Label();
             this.bronzeLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wave1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -522,16 +523,16 @@
             this.axWindowsMediaPlayer2.TabIndex = 39;
             this.axWindowsMediaPlayer2.Visible = false;
             // 
-            // label2
+            // winnersLabel
             // 
-            this.label2.BackColor = System.Drawing.Color.Green;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(784, 418);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 26);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Kazananlar";
+            this.winnersLabel.BackColor = System.Drawing.Color.Green;
+            this.winnersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.winnersLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.winnersLabel.Location = new System.Drawing.Point(784, 418);
+            this.winnersLabel.Name = "winnersLabel";
+            this.winnersLabel.Size = new System.Drawing.Size(124, 26);
+            this.winnersLabel.TabIndex = 41;
+            this.winnersLabel.Text = "Kazananlar";
             // 
             // goldLabel
             // 
@@ -566,16 +567,29 @@
             this.bronzeLabel.TabIndex = 44;
             this.bronzeLabel.Text = "3.";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(758, 526);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 33);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Detaylar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1126, 571);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.bronzeLabel);
             this.Controls.Add(this.silverLabel);
             this.Controls.Add(this.goldLabel);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.winnersLabel);
             this.Controls.Add(this.axWindowsMediaPlayer2);
             this.Controls.Add(this.finishLabel);
             this.Controls.Add(this.label5);
@@ -674,10 +688,11 @@
         private System.Windows.Forms.PictureBox wave2;
         private System.Windows.Forms.PictureBox wave3;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label winnersLabel;
         private System.Windows.Forms.Label goldLabel;
         private System.Windows.Forms.Label silverLabel;
         private System.Windows.Forms.Label bronzeLabel;
+        private System.Windows.Forms.Button button1;
     }
 }
 

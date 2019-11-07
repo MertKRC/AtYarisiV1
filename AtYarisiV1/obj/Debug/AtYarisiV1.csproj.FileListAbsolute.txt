@@ -5,7 +5,6 @@ C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.csprojAss
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.Form1.resources
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.Properties.Resources.resources
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.csproj.GenerateResource.cache
-C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.csproj.CoreCompileInputs.cache
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.exe
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.pdb
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\Interop.WMPLib.dll
