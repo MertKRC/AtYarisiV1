@@ -91,3 +91,12 @@ New scoreboard available now ! There are a few updates to do...
 Oct 31, 2019 Features;
 
 Horse sfx hotfix. Now the horse sfx ends with the finish line. So sfx does not continue in another race, it starts all over again.
+
+-------------------------------
+
+Nov 07, 2019 Features;
+
+Fixed sea mode color mismatch
+
+Details button functionalty and scoreboard fix upcoming...
+
