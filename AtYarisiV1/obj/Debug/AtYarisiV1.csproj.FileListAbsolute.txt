@@ -12,3 +12,17 @@ C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\obj\Debug\AtYarisiV1.csproj.ResolveComReference.cache
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\bin\Debug\Interop.WMPLib.dll
 C:\Users\selef\source\repos\AtYarisiV1\AtYarisiV1\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\bin\Debug\AtYarisiV1.exe.config
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\bin\Debug\AtYarisiV1.exe
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\bin\Debug\AtYarisiV1.pdb
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\bin\Debug\Interop.WMPLib.dll
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\obj\Debug\AtYarisiV1.csprojAssemblyReference.cache
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\obj\Debug\Interop.WMPLib.dll
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\obj\Debug\AtYarisiV1.csproj.ResolveComReference.cache
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\obj\Debug\AtYarisiV1.Form1.resources
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\obj\Debug\AtYarisiV1.Properties.Resources.resources
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\obj\Debug\AtYarisiV1.csproj.GenerateResource.cache
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\obj\Debug\AtYarisiV1.exe
+C:\Users\selef\Source\Repos\MertKRC\Horse-Race\AtYarisiV1\obj\Debug\AtYarisiV1.pdb
