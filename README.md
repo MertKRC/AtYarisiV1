@@ -12,6 +12,9 @@ There will be updates soon and change logs will be accessible below this text.
 
 I'm open for any advices or ideas.
 
+### Quick Preview
+![Horse-Race](https://raw.githubusercontent.com/MertKRC/Horse-Race/master/Github/horse-race.gif)
+
 Change Log:
 -------------------------------
 Oct 21, 2019 Features;
